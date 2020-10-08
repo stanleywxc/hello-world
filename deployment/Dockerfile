@@ -24,9 +24,9 @@ RUN mvn install
 #         The docker image
 #----------------------------------------------
 FROM openjdk:8-jre-alpine
-ARG ARTIFACTID=hello-world
-ARG VERSION=0.0.1
-ARG JAVA_OPTS="-XX:+UseG1GC"
+ENV ARTIFACTID=hello-world
+ENV VERSION=0.0.1
+ENV JAVA_OPTS="-XX:+UseG1GC"
 
 ENV artifact ${ARTIFACTID}-${VERSION}.jar
 
